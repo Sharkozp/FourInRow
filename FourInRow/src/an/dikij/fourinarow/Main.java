@@ -14,9 +14,12 @@ public class Main extends Activity implements OnClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-
 		Button timeButton = (Button) findViewById(R.id.bestTimeButton);
-		timeButton.setOnClickListener(new ChangeScreen().changeScreen(this, BestTime.class));
+		timeButton.setOnClickListener(new ChangeScreen().changeScreen(this,
+				BestTime.class));
+		Button gameButton = (Button) findViewById(R.id.newGameButton);
+		gameButton.setOnClickListener(new ChangeScreen().changeScreen(this,
+				GameScreen.class));
 	}
 
 	@Override
